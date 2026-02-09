@@ -2,27 +2,31 @@
 
 A lightweight and customizable Flutter package for selecting country phone dial codes using a smooth wheel-style picker.
 
-Designed to be simple, flexible, and easy to integrate into any Flutter application.
+Built to be simple, flexible, and easy to integrate into any Flutter application.
 
 ---
 
 ## ✨ Features
 
-- 🎡 Smooth wheel-style country selector  
-- 🌍 Built-in list of common countries and dial codes  
-- 🎯 Set an initial selected country  
-- 🎨 Fully customizable colors (selected, unselected, border)  
-- 🧩 Strongly typed API (`CountryData`)  
-- 📦 Lightweight and package-friendly  
-- 🔌 Easy to extend with custom country lists  
+- 🎡 Smooth wheel-style country dial code selector
+- 🌍 Built-in list of common countries and dial codes
+- 🎯 Supports initial country selection
+- 🎨 Fully customizable colors (selected, unselected, border)
+- 🧩 Strongly typed API using `CountryData`
+- 📦 Lightweight and package-friendly
+- 🔌 Supports custom country lists
 
 ---
 
 ## 📸 Preview
 
-| Android | iOS |
-|--------|-----|
-| ![Android Preview](assets/android.png) | ![iOS Preview](assets/ios.png) |
+### Android
+<img src="assets/android.png" width="300"/>
+
+### iOS
+<img src="assets/ios.png" width="300"/>
+
+> Images are rendered automatically on **pub.dev** when placed in the `assets/` folder.
 
 ---
 
@@ -33,3 +37,175 @@ Add this to your `pubspec.yaml`:
 ```yaml
 dependencies:
   countrydialselector: ^0.0.1
+````
+
+Then run:
+
+```bash
+flutter pub get
+```
+
+---
+
+## 📦 Import
+
+```dart
+import 'package:countrydialselector/countrydialselector.dart';
+```
+
+---
+
+## 🧑‍💻 Basic Usage
+
+```dart
+CountryPickerWheel(
+  initialCountry: const CountryData(
+    name: 'Nigeria',
+    dialCode: '+234',
+  ),
+  selectedTextColor: Colors.green,
+  unselectedTextColor: Colors.grey,
+  borderColor: Colors.green,
+  onSelected: (country) {
+    debugPrint('${country.name} → ${country.dialCode}');
+  },
+)
+```
+
+---
+
+## 🎨 Customization
+
+```dart
+CountryPickerWheel(
+  selectedTextColor: Colors.blue,
+  unselectedTextColor: Colors.black45,
+  borderColor: Colors.blue,
+  height: 240,
+  itemExtent: 60,
+  onSelected: (country) {},
+)
+```
+
+---
+
+## 🌍 Using a Custom Country List
+
+```dart
+CountryPickerWheel(
+  countries: const [
+    CountryData(name: 'Ghana', dialCode: '+233'),
+    CountryData(name: 'Kenya', dialCode: '+254'),
+    CountryData(name: 'Egypt', dialCode: '+20'),
+  ],
+  onSelected: (country) {
+    print(country.dialCode);
+  },
+)
+```
+
+---
+
+## 📚 API Reference
+
+### CountryPickerWheel
+
+| Property              | Type                        | Description                     |
+| --------------------- | --------------------------- | ------------------------------- |
+| `countries`           | `List<CountryData>`         | List of countries to display    |
+| `initialCountry`      | `CountryData?`              | Country selected initially      |
+| `onSelected`          | `ValueChanged<CountryData>` | Callback when selection changes |
+| `selectedTextColor`   | `Color`                     | Color of selected item          |
+| `unselectedTextColor` | `Color`                     | Color of unselected items       |
+| `borderColor`         | `Color`                     | Highlight border color          |
+| `height`              | `double`                    | Height of the picker wheel      |
+| `itemExtent`          | `double`                    | Height of each wheel item       |
+
+---
+
+### CountryData
+
+```dart
+class CountryData {
+  final String name;
+  final String dialCode;
+
+  const CountryData({
+    required this.name,
+    required this.dialCode,
+  });
+}
+```
+
+---
+
+## 🧪 Local Testing
+
+You can test this package locally using a **path dependency** or by running the `example/` app if included.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## Author
+
+**Ridwan Abdulazeez**
+
+If you find this package useful, please ⭐ the repository and share feedback!
+
+````
+
+---
+
+## ✅ pubspec.yaml (assets section)
+
+Make sure this is included in **your package `pubspec.yaml`**:
+
+```yaml
+flutter:
+  assets:
+    - assets/android.png
+    - assets/ios.png
+````
+
+And your folder structure should be:
+
+```
+countrydialselector/
+ ├─ assets/
+ │   ├─ android.png
+ │   └─ ios.png
+ ├─ lib/
+ ├─ README.md
+ └─ pubspec.yaml
+```
+
+---
+
+## 🔥 You’re now pub.dev–ready
+
+Once you:
+
+* commit the LICENSE
+* commit README
+* commit assets
+
+Run:
+
+```bash
+flutter pub publish
+```
