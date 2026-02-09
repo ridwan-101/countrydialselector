@@ -1,6 +1,6 @@
 name: countrydialselector
 description: "A Flutter widget for selecting countries and their international dialing codes."
-version: 0.0.2
+version: 0.0.1
 homepage: https://github.com/ridwan-101/countrydialselector
 
 environment:

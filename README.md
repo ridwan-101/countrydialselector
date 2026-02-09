@@ -16,20 +16,6 @@ Built to be simple, flexible, and easy to integrate into any Flutter application
 - 📦 Lightweight and package-friendly
 - 🔌 Supports custom country lists
 
----
-
-## 📸 Preview
-
-### Android
-<img src="assets/android.png" width="300"/>
-
-### iOS
-<img src="assets/ios.png" width="300"/>
-
-> Images are rendered automatically on **pub.dev** when placed in the `assets/` folder.
-
----
-
 ## 🚀 Installation
 
 Add this to your `pubspec.yaml`:
@@ -139,11 +125,6 @@ class CountryData {
 
 ---
 
-## 🧪 Local Testing
-
-You can test this package locally using a **path dependency** or by running the `example/` app if included.
-
----
 
 ## 🤝 Contributing
 
@@ -169,43 +150,3 @@ If you find this package useful, please ⭐ the repository and share feedback!
 
 ````
 
----
-
-## ✅ pubspec.yaml (assets section)
-
-Make sure this is included in **your package `pubspec.yaml`**:
-
-```yaml
-flutter:
-  assets:
-    - assets/android.png
-    - assets/ios.png
-````
-
-And your folder structure should be:
-
-```
-countrydialselector/
- ├─ assets/
- │   ├─ android.png
- │   └─ ios.png
- ├─ lib/
- ├─ README.md
- └─ pubspec.yaml
-```
-
----
-
-## 🔥 You’re now pub.dev–ready
-
-Once you:
-
-* commit the LICENSE
-* commit README
-* commit assets
-
-Run:
-
-```bash
-flutter pub publish
-```
