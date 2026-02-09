@@ -1,39 +1,35 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# countrydialselector
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+A lightweight and customizable Flutter package for selecting country phone dial codes using a smooth wheel-style picker.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+Designed to be simple, flexible, and easy to integrate into any Flutter application.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+---
 
-## Features
+## ✨ Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- 🎡 Smooth wheel-style country selector  
+- 🌍 Built-in list of common countries and dial codes  
+- 🎯 Set an initial selected country  
+- 🎨 Fully customizable colors (selected, unselected, border)  
+- 🧩 Strongly typed API (`CountryData`)  
+- 📦 Lightweight and package-friendly  
+- 🔌 Easy to extend with custom country lists  
 
-## Getting started
+---
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## 📸 Preview
 
-## Usage
+| Android | iOS |
+|--------|-----|
+| ![Android Preview](assets/android.png) | ![iOS Preview](assets/ios.png) |
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+---
 
-```dart
-const like = 'sample';
-```
+## 🚀 Installation
 
-## Additional information
+Add this to your `pubspec.yaml`:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```yaml
+dependencies:
+  countrydialselector: ^0.0.1
