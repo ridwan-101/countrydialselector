@@ -22,7 +22,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  countrydialselector: ^0.0.1
+  countrydialselector: ^0.0.3
 ````
 
 Then run:
